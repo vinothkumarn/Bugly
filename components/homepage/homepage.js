@@ -1,5 +1,5 @@
 class HomePage {
-  index() {
+  getContent() {
     return 'Bugly - Automated Vulnerability Scanner';
   }
 }
