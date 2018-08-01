@@ -1,0 +1,22 @@
+{
+  "name": "bugly",
+  "version": "1.0.0",
+  "description": "Automated Vulnerability Scanner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinothkumarn/Bugly.git"
+  },
+  "author": "Vinothkumar Nagasayanan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinothkumarn/Bugly/issues"
+  },
+  "homepage": "https://github.com/vinothkumarn/Bugly#readme",
+  "dependencies": {
+    "crawler": "1.1.4"
+  }
+}
