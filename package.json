@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/vinothkumarn/Bugly#readme",
   "dependencies": {
+    "body-parser": "1.18.3",
     "crawler": "1.1.4",
     "express": "4.16.3"
   }

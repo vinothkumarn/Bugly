@@ -1,10 +1,7 @@
-const router = require('express').Router();
-const homePage = require('../../components/homepage/homepage');
+const router = require('express').Router()
 
-const homePageObj = new homePage();
-const homePageContent = homePageObj.getContent();
 router.get('/', function (req, res) {
-  res.send(homePageContent);
-});
+  res.sendFile(appRoot+ '/public/html/homepage.html')
+})
 
-module.exports = router;
+module.exports = router
