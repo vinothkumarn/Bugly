@@ -1,4 +1,4 @@
-var request = require('request')
+let request = require('request')
 
 class Crawler {
 	fetchData(url) {
@@ -9,7 +9,7 @@ class Crawler {
   	})
 	}
   async getContent(url) {
-  	var result = await this.fetchData(url)
+  	let result = await this.fetchData(url)
   	return result
   }
 }

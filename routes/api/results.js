@@ -1,17 +1,18 @@
 const router = require('express').Router()
-var express = require('express')
-var bodyParser = require('body-parser')
-var app = express()
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
-var crawler = require('../../components/crawler/crawler')
-var evaluate = require('../../components/evaluate/evaluate')
+let express = require('express')
+let bodyParser = require('body-parser')
+let app = express()
+let urlencodedParser = bodyParser.urlencoded({ extended: false })
+let crawler = require('../../components/crawler/crawler')
+let evaluate = require('../../components/evaluate/evaluate')
 
-var crawlerObj = new crawler()
-var evaluateObj = new evaluate()
+let crawlerObj = new crawler()
+let evaluateObj = new evaluate()
 router.post('', urlencodedParser, async (req, res) => {
-  var crawledContent = await crawlerObj.getContent(req.body.inputUrl)
-  var evaluatedResult = evaluateObj.processHtml(crawledContent)
-  res.send(evaluatedResult)
+	let url = req.body.inputUrl
+  let crawledContent = await crawlerObj.getContent(url)
+  let evaluatedResult = evaluateObj.processHtml(url, crawledContent)
+  res.json(JSON.parse(evaluatedResult))
 })
 
 module.exports = router
