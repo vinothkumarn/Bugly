@@ -3,8 +3,8 @@ const cheerio = require('cheerio')
 class Evaluate {
 
 	processHtml(url, content) {
-		let result = ''
-		result += this.processInlineScript(url, content)
+		let result
+		result = this.processInlineScript(url, content)
 		return result
 	}
 
@@ -16,7 +16,7 @@ class Evaluate {
 			//con += parser(element).html()
 			con[url].push(parser(element).html())
 		})
-		return JSON.stringify(con)
+		return con
 	}
 
 }

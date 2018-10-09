@@ -12,7 +12,7 @@ router.post('', urlencodedParser, async (req, res) => {
 	let url = req.body.inputUrl
   let crawledContent = await crawlerObj.getContent(url)
   let evaluatedResult = evaluateObj.processHtml(url, crawledContent)
-  res.json(JSON.parse(evaluatedResult))
+  res.json(evaluatedResult)
 })
 
 module.exports = router
